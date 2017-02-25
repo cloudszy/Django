@@ -1,0 +1,45 @@
+1.处理django admin后台界面添加中文文档乱码错误 
+
+终端命令合集：
+pwd 显示文目录路径
+mkdir 创建文件
+ls -ah 看隐藏目录
+cat xxx.txt 看文件内容
+
+
+Git命令合集：
+git init 创建版本库
+git add xxx 添加文件到版本库
+git commit -m “本次提交说明”
+git status 查看当前仓库动态
+git diff 查看difference(差异)，可以看到具体修改内容
+
+
+
+
+
+python安装目录下的lib\site-packages文件夹下新建一个sitecustomize.py，文件中的代码为：
+
+import sys  
+
+sys.setdefaultencoding('utf-8')   
+
+ 
+
+2.25
+1.添加SSH密匙
+	1.1 创建SSH KEY ， ssh-v 查看ssh版本 ， shh-keygen 当前用户下生成.ssh
+	1.2 登入GitHub， 打开settings， 打开SSH and keys
+	1.3 输入任意title，在key文本框粘贴id_raa.pub文件内容
+	1.4 提示出错信息：fatal: remote origin already exists， 输入$ git remote rm origin即可
+
+2.添加远程仓库
+	2.1 git remote add origin git@‘自己的shh’
+	2.2 git push -u origin master 
+
+3.本地提交远程GitHub
+	3.1 git add xxx
+	3.2 git commit -m “注释”
+	3.3 git push origin master
+
+
